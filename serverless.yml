@@ -1,0 +1,15 @@
+org: andrezipfdev
+app: nubank-to-splitwise
+service: nubank-to-splitwise
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  rateHandler:
+    handler: index.run
+    events:
+      # Invoke Lambda function every minute
+      - schedule: rate(5 minute)

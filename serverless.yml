@@ -8,8 +8,10 @@ provider:
   runtime: nodejs18.x
 
 functions:
-  rateHandler:
+  nubank-to-splitwise:
     handler: index.run
     events:
-      # Invoke Lambda function every minute
-      - schedule: rate(5 minute)
+      - schedule: rate(5 minutes)
+
+plugins:
+  - serverless-plugin-typescript

@@ -5,12 +5,25 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "execute": "serverless invoke local --function nubank-to-splitwise"
+    "execute": "serverless invoke local --function nubank-to-splitwise",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.122",
+    "@types/jest": "^29.5.5",
     "@types/serverless": "^3.12.15",
+    "@types/sinon": "^10.0.16",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
     "serverless-plugin-typescript": "^2.1.5",
+    "sinon": "^16.0.0",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   }
 }
